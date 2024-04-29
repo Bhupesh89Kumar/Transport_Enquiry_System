@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Trains</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .hd {
+            margin: 0;
+            font-size: 24px;
+        }
+        .home {
+            display: inline-block;
+            margin: 0 10px;
+        }
+        .menu a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            background-color: #555;
+            transition: background-color 0.3s;
+        }
+        .menu a:hover {
+            background-color: #777;
+        }
+        .main {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .tab {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        .tab input[type="text"], .tab input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .tab input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .tab input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="hd">National Ticket Booking Spot</h1>
+        <div class="home">
+            <p class="menu">
+                <a href="AdminHome.html">Home</a>
+            </p>
+        </div>
+        <div class="home">
+            <p class="menu">
+                <a href="adminviewtrainfwd">View Trains</a>
+            </p>
+        </div>
+        <div class="home">
+            <p class="menu">
+                <a href="adminsearchtrainfwd">Search By TrainNo</a>
+            </p>
+        </div>
+        <div class="home">
+            <p class="menu">
+                <a href="addtrainfwd">Add Train</a>
+            </p>
+        </div>
+        <div class="home">
+            <p class="menu">
+                <a href="cancletrainfwd">Delete Train</a>
+            </p>
+        </div>
+        <div class="home">
+            <p class="menu">
+                <a href="updatetrain">Update Train Details</a>
+            </p>
+        </div>
+        <div class="home">
+            <p class="menu">
+                <a href="adminlogout">Logout</a>
+            </p>
+        </div>
+    </header>
+    <div class='main'>
+        <p class='menu'> Add Trains </p>
+    </div>
+    <form class="tab" action="adminaddtrain" method="post">
+        <br /> Train Number:<input type="text" name="trainno"><br />
+        <br /> Train Name: <input type="text" name="trainname"><br />
+        <br /> From Station: <input type="text" name="fromstation"><br />
+        <br /> To Station: <input type="text" name="tostation"><br />
+        <br /> Available: <input type="text" name="available"><br />
+        <br /> Fare (INR): <input type="text" name="fare"><br />
+        <br /> <input type="submit" value=" ADD TRAIN ">
+    </form>
+    <br />
+</body>
+</html>

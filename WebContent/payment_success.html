@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Transaction Successful</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<style>
+    /* Background image */
+body {
+    background-image: url('sandy.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.container {
+    margin-top: 50px;
+    color: #ffffff; /* White text color */
+}
+
+.message {
+    text-align: center;
+    font-size: 36px; /* Increase font size */
+    margin-bottom: 30px;
+}
+
+.reference-number {
+    text-align: center;
+    font-size: 24px; /* Increase font size */
+    color: #ffffff; /* White text color */
+    margin-top: 20px; /* Add margin at the top */
+}
+
+.payment-details {
+    margin-top: 50px;
+}
+
+.payment-details table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.payment-details th, .payment-details td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ffffff; /* White border */
+}
+
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="message">
+            <p>Transaction Successful!</p>
+        </div>
+        <div class="reference-number">
+            <p>Your Reference Number: <span id="referenceNumber"></span></p>
+        </div>
+        
+        <!-- Display payment details in a table -->
+        <div class="payment-details">
+            <table>
+                <tr>
+                    <th>Payment Details</th>
+                    <th>Information</th>
+                </tr>
+                <tr>
+                    <td>Card Number</td>
+                    <td id="cardNumber">XXXX-XXXX-XXXX-XXXX</td> <!-- Replace with actual card number -->
+                </tr>
+                <tr>
+                    <td>Expiration Date</td>
+                    <td id="expirationDate">MM/YY</td> <!-- Replace with actual expiration date -->
+                </tr>
+                <tr>
+                    <td>Card Owner</td>
+                    <td id="cardOwner">John Doe</td> <!-- Replace with actual card owner name -->
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        // Function to generate a random reference number
+        function generateReferenceNumber() {
+            var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+            var referenceNumber = '';
+            var length = 8;
+            for (var i = 0; i < length; i++) {
+                referenceNumber += characters.charAt(Math.floor(Math.random() * characters.length));
+            }
+            return referenceNumber;
+        }
+
+        // Display the generated reference number
+        document.getElementById('referenceNumber').innerText = generateReferenceNumber();
+
+        // Retrieve payment details from URL parameters (if passed)
+        var urlParams = new URLSearchParams(window.location.search);
+        var cardNumber = urlParams.get('cardNumber');
+        var expirationDate = urlParams.get('expirationDate');
+        var cardOwner = urlParams.get('cardOwner');
+
+        // Update payment details in the table
+        document.getElementById('cardNumber').innerText = cardNumber ? cardNumber : 'XXXX-XXXX-XXXX-XXXX';
+        document.getElementById('expirationDate').innerText = expirationDate ? expirationDate : 'MM/YY';
+        document.getElementById('cardOwner').innerText = cardOwner ? cardOwner : 'John Doe';
+    </script>
+</body>
+</html>

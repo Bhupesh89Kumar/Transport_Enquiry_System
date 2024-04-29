@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>E-Trains</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<style>
+  /* Global Styles */
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+  }
+  
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  .menu {
+    display: inline-block;
+    margin: 0 10px;
+  }
+  
+  .menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  .tab {
+    background-color: #555;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    margin: 20px auto;
+    width: 300px;
+    border-radius: 5px;
+  }
+  
+  input[type="text"],
+  input[type="password"],
+  input[type="submit"] {
+    padding: 10px;
+    margin: 5px 0;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+  }
+  
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  #cent {
+    margin-bottom: 0;
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1 class="hd">Transport Enquiry System</h1>
+  <div class="home">
+    <p class="menu"><a href="userhome">Home</a></p>
+    <p class="menu"><a href="userviewtrainfwd">View Trains</a></p>
+    <p class="menu"><a href="trainbwstnfwd">Trains Between Stations</a></p>
+    <p class="menu"><a href="BookingDetails">Ticket Booking History</a></p>
+    <p class="menu"><a href="fareenqfwd">Fare Enquiry</a></p>
+    <p class="menu"><a href="Busschedules.html">Bus Schedules</a></p>
+    <p class="menu"><a href="useravailfwd">Seat Availability</a></p>
+    <p class="menu"><a href="usersearchtrain">Search By TrainNo</a></p>
+    <p class="menu"><a href="userprofile">Profile</a></p>
+    <p class="menu"><a href="userlogout">Logout</a></p>
+  </div>
+</header>
+<div class="tab green">User Login</div>
+<form action="userlogin" class="tab brown" method="post">
+  <br /> UserName: <input type="text" name="uname" placeholder="Enter Your EmailId"> <br /> <br /> Password: <input type="password" name="pword"> <br /> <br /> <input type="submit" value=" LOGIN "><br />
+</form>
+<br />
+<footer>
+  <address id="cent">
+    Contact: Mr. Shashi Raj<br />Email:<a href="mailto:thebittercode@gmail.com">thebittercode@gmail.com</a><br />PhoneNo: 9876543210
+  </address>
+</footer>
+</body>
+</html>
+
